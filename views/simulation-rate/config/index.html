@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080d14" />
+    <title>Simulation Rate Config · DesktopXR</title>
+    <link rel="stylesheet" href="/home.css" />
+    <link rel="stylesheet" href="/simulation-rate/config/style.css" />
+    <script src="/simulation-rate/config/app.js" defer></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="DesktopXR Flight Panels home">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>DESKTOPXR <span class="brand-secondary">FLIGHT PANELS</span></span>
+        </a>
+        <a class="back-link" href="/simulation-rate/">BACK TO PANEL</a>
+      </header>
+
+      <section class="intro">
+        <p class="eyebrow">SIMULATION RATE</p>
+        <h1>Configuration</h1>
+        <p class="subtitle">Choose when the Simulation Rate panel should be hidden.</p>
+      </section>
+
+      <section class="config-placeholder" aria-label="Configuration options">
+        <label class="config-option">
+          <input id="hide-when-1x" type="checkbox" />
+          <span class="option-copy">
+            <span class="option-title">Hide when 1x</span>
+            <span class="option-description">Hide the info while simulation rate is 1×.</span>
+          </span>
+        </label>
+        <label class="config-option">
+          <input id="hide-when-engine-off" type="checkbox" checked />
+          <span class="option-copy">
+            <span class="option-title">Hide when engine off</span>
+            <span class="option-description">Hide the info when all aircraft engines are off or engine status is unavailable.</span>
+          </span>
+        </label>
+        <div class="config-option transparency-option">
+          <label class="option-copy" for="transparency">
+            <span class="option-title">Transparency</span>
+            <span class="option-description">Adjust how transparent the info appears.</span>
+          </label>
+          <div class="range-control">
+            <input id="transparency" type="range" min="5" max="95" step="1" value="5" aria-label="Info transparency" />
+            <output id="transparency-value" for="transparency">Very visible</output>
+            <span class="range-endpoints" aria-hidden="true"><span>Very visible</span><span>Very faint</span></span>
+          </div>
+        </div>
+        <p class="save-status" id="save-status" role="status" aria-live="polite">Settings are saved in this browser.</p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080d14" />
+    <title>DesktopXR Flight Panels</title>
+    <link rel="stylesheet" href="/home.css" />
+    <script src="/home.js" defer></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="DesktopXR Flight Panels home">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>DESKTOPXR <span class="brand-secondary">FLIGHT PANELS</span></span>
+        </a>
+        <span class="local-tag"><span class="local-dot"></span> LOCAL APP</span>
+      </header>
+
+      <section class="intro">
+        <p class="eyebrow">MSFS 2024 · SIMCONNECT</p>
+        <h1>Flight panels</h1>
+        <p class="subtitle">Lightweight live views for your DesktopXR workspace.</p>
+      </section>
+
+      <section class="status-card" aria-live="polite">
+        <span class="status-icon" aria-hidden="true"><span></span></span>
+        <div class="status-copy">
+          <h2>SimConnect</h2>
+        </div>
+        <span class="status-badge" id="status-badge">CHECKING</span>
+      </section>
+
+      <section class="databridge-section" aria-labelledby="databridge-title">
+        <div class="section-heading bridge-section-heading">
+          <div>
+            <p class="eyebrow">DESKTOPXR INTEGRATION</p>
+            <h2 id="databridge-title">DataBridge panels</h2>
+          </div>
+          <span class="slot-count">4 SLOTS</span>
+        </div>
+        <p class="bridge-intro">Choose which web panels DesktopXR loads. Each card maps to one of the four WebOverlays slots in your DataBridge settings.</p>
+
+        <div class="bridge-card">
+          <div class="bridge-file-row">
+            <div class="bridge-file-copy">
+              <h3>WebOverlays configuration</h3>
+              <p id="databridge-path" class="bridge-path">Checking for the DataBridge config file…</p>
+            </div>
+            <span id="databridge-state" class="bridge-state">CHECKING</span>
+          </div>
+
+          <p id="databridge-notice" class="bridge-notice" role="status" aria-live="polite">Loading your four panel slots…</p>
+          <label class="advanced-options-toggle" for="advanced-options">
+            <input id="advanced-options" type="checkbox" aria-controls="panel-slots" />
+            <span class="advanced-toggle-copy">
+              <span class="advanced-toggle-title">Advanced Options</span>
+              <span class="advanced-toggle-description">Show panel addresses and optional width and height.</span>
+            </span>
+          </label>
+          <div id="panel-slots" class="panel-slots">
+            <p class="empty-state">Reading DataBridge settings…</p>
+          </div>
+
+          <div class="bridge-bottom-row">
+            <p id="registered-summary" class="registered-summary">— of 4 panels enabled</p>
+            <div class="bridge-actions">
+              <button id="reload-databridge" class="button button-secondary" type="button">Reload file</button>
+              <button id="save-databridge" class="button button-primary" type="button" disabled>Save changes</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="views-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">YOUR OVERLAYS</p>
+            <h2>Available views</h2>
+          </div>
+          <span class="view-count" id="view-count">—</span>
+        </div>
+        <div class="view-list" id="view-list">
+          <p class="empty-state">Loading views…</p>
+        </div>
+      </section>
+
+      <footer>Keep this app running while using its pages in DesktopXR.</footer>
+    </main>
+  </body>
+</html>

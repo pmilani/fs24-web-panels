@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080d14" />
+    <title>Real World Clock Config · DesktopXR</title>
+    <link rel="stylesheet" href="/home.css" />
+    <link rel="stylesheet" href="/real-world-clock/config/style.css" />
+    <script src="/real-world-clock/config/app.js" defer></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="DesktopXR Flight Panels home">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>DESKTOPXR <span class="brand-secondary">FLIGHT PANELS</span></span>
+        </a>
+        <a class="back-link" href="/real-world-clock/">BACK TO PANEL</a>
+      </header>
+
+      <section class="intro">
+        <p class="eyebrow">REAL WORLD CLOCK</p>
+        <h1>Configuration</h1>
+        <p class="subtitle">Choose how the local time is displayed.</p>
+      </section>
+
+      <fieldset class="format-options">
+        <legend>Format</legend>
+        <label class="format-option">
+          <input type="radio" name="format" value="24h" checked />
+          <span class="option-copy">
+            <span class="option-title">24h</span>
+            <span class="option-description">For example, 17:45.</span>
+          </span>
+        </label>
+        <label class="format-option">
+          <input type="radio" name="format" value="ampm" />
+          <span class="option-copy">
+            <span class="option-title">AM/PM</span>
+            <span class="option-description">For example, 5:45 PM.</span>
+          </span>
+        </label>
+        <p class="save-status" id="save-status" role="status" aria-live="polite">Settings are saved in this browser.</p>
+      </fieldset>
+    </main>
+  </body>
+</html>
